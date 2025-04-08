@@ -38,3 +38,25 @@ La expliación es: usé sed para cambiar los nombres dentro del archivo, el -E e
 agrupo los primeros caracteres (por ejemplo >AB201258.1), dejo un espacio por el espacio que hay en los nombres, y los siguientes grupos que son (\w+) es para agrupar las otras partes del nombre,
 siempre dejando el espacio por el espacio que hay entre estos. Luego, pongo .* para que se seleccione el resto de la línea sin importar que tenga sin agarrar los nucleótidos de las secuencias.
 Al final digo en que archivo está (sequences.fasta) y señalo el archivo que quiero crear para guardar estas modificaciones (> secuencias.fasta)
+
+### 4
+
+Primero generé la base de datos de la siguiente forma:
+
+```
+salloc
+module load blast/2.7.1
+makeblastdb -in secuencias.fasta -dbtype nucl -parse_seqids -out blastsec -title "Misticetos"
+```
+
+Luego realicé un Blast con el querry:
+
+```
+blastn -query query.fasta -task megablast -db blastsec -outfmt 7 -word_size 7 -out blastballenas -num_threads 1
+```
+### 5
+
+Según lo obtenido, la mejor identificación fue de AP006472.1_Balaena_mysticetus, esto dado que posee un 100% de identidad, tiene una longitud de alineamiento de 13 (de las más altas en las
+que tienen 100% de identidad), tiene 0 gaps y 0 mistmatches, su evalue es de 2.3 (es de los más cercanos a 0 de aquellos que tienen 100% de similitud e implica que tiene mayor soporte), 
+su bitscore es de 25.1 (de los más altos con la identidad del 100%, lo que indica que tiene un alto soporte) y finalmente sos q. start son de 498 y 510 respectivamente, lo que le da un mayor 
+soporte a esta identifiación con respecto a las demás.
