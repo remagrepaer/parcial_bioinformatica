@@ -119,3 +119,10 @@ Las especies son:
 >AP006472.1_Balaena_mysticetus
 >seq1 (que anteriormente había sido identificada como AP006472.1_Balaena_mysticetus)
 
+![Caos](https://github.com/remagrepaer/parcial_bioinformatica/blob/main/Ryjgf6cfdXKJOMm2KaqkEA.png)
+
+Se puede observar que los individuos la especie _Caperea marginata_ forman un grupo monofiletico, lo que lo hace un grupo biológico real.
+
+Sin embargo, la seq1 parece estar más emparentada con la especie _Balaenoptera edeni_, la cuál está incluso más cerca a la especie _Baleenoptera brydei_.
+
+La especie más alejada en termnos de relaciones filogenéticas es la especie _Balaenoptera omurai_.
