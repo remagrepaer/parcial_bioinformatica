@@ -108,16 +108,16 @@ iqtree -s FcC_supermatrix.fas -m GTR+I+G -bb 1000 -pre ballenas
 ### 9
 
 Las especies son:
->AB201258.1_Balaenoptera_edeni
->AP006469.1_Balaenoptera_brydei
->AP006470.1_Balaenoptera_borealis
->AB201256.1_Balaenoptera_omurai
->X72204.1_Balaenoptera_musculus
->AJ554054.1_Balaenoptera_acutorostrata
->AJ554052.1_Caperea_marginata
->AP006475.1_Caperea_marginata
->AP006472.1_Balaena_mysticetus
->seq1 (que anteriormente había sido identificada como AP006472.1_Balaena_mysticetus)
+* AB201258.1_Balaenoptera_edeni
+* AP006469.1_Balaenoptera_brydei
+* AP006470.1_Balaenoptera_borealis
+* AB201256.1_Balaenoptera_omurai
+* X72204.1_Balaenoptera_musculus
+* AJ554054.1_Balaenoptera_acutorostrata
+* AJ554052.1_Caperea_marginata
+* AP006475.1_Caperea_marginata
+* AP006472.1_Balaena_mysticetus
+* seq1 (que anteriormente había sido identificada como AP006472.1_Balaena_mysticetus)
 
 ![Caos](https://github.com/remagrepaer/parcial_bioinformatica/blob/main/Ryjgf6cfdXKJOMm2KaqkEA.png)
 
