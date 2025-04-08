@@ -60,3 +60,62 @@ Según lo obtenido, la mejor identificación fue de AP006472.1_Balaena_mysticetu
 que tienen 100% de identidad), tiene 0 gaps y 0 mistmatches, su evalue es de 2.3 (es de los más cercanos a 0 de aquellos que tienen 100% de similitud e implica que tiene mayor soporte), 
 su bitscore es de 25.1 (de los más altos con la identidad del 100%, lo que indica que tiene un alto soporte) y finalmente sos q. start son de 498 y 510 respectivamente, lo que le da un mayor 
 soporte a esta identifiación con respecto a las demás.
+
+# Punto 2
+
+## Procedimiento:
+
+### 7
+
+Se creó el archivo .sh:
+
+```
+nano parcial.sh
+```
+
+Dentro de este se puso:
+
+```
+#!/bin/bash
+#SBATCH -p normal
+#SBATCH -N 1
+#SBATCH -n 10
+#SBATCH -t 0-00:20
+#SBATCH -o salida.out
+#SBATCH -e error.err
+#SBATCH --mail-user=davidl.prieto@urosario.edu.co
+#SBATCH --mail-type= ALL
+
+muscle -in pun2.fasta -out alineamiento.fasta
+```
+
+Y luego se corrió el código:
+
+```
+sbatch parcial.sh
+```
+
+### 8
+
+El código usado para generar el árbol fue:
+
+```
+./FASconCAT-G_v1.05.1.pl -n -p -s
+module load iqtree/1.6.12
+iqtree -s FcC_supermatrix.fas -m GTR+I+G -bb 1000 -pre ballenas
+```
+
+### 9
+
+Las especies son:
+>AB201258.1_Balaenoptera_edeni
+>AP006469.1_Balaenoptera_brydei
+>AP006470.1_Balaenoptera_borealis
+>AB201256.1_Balaenoptera_omurai
+>X72204.1_Balaenoptera_musculus
+>AJ554054.1_Balaenoptera_acutorostrata
+>AJ554052.1_Caperea_marginata
+>AP006475.1_Caperea_marginata
+>AP006472.1_Balaena_mysticetus
+>seq1 (que anteriormente había sido identificada como AP006472.1_Balaena_mysticetus)
+
